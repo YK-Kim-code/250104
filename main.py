@@ -1,6 +1,8 @@
 import streamlit as st
 import numpy 
 import pandas as pd
+import matplotlib.pyplot as plt
+
 st.title("MBTI Distribution by Country")
 st.write("데이터 로드 전")
 data_path = "countriesMBTI.csv"
