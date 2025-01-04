@@ -1,5 +1,4 @@
 import streamlit as st
-import numpy 
 import pandas as pd
 
 st.title("MBTI Distribution by Country")
@@ -21,7 +20,9 @@ filtered_data = df[df["Country"] == selected_country]
 st.subheader(f"MBTI Distribution in {selected_country}")
 st.table(filtered_data)
 
+# MBTI 유형별 분포 계산
+mbti_counts = filtered_data["MBTI"].value_counts()
 
-# 막대그래프 시각화
+# MBTI 분포를 막대 그래프로 시각화
 st.subheader(f"MBTI Distribution Chart in {selected_country}")
-st.bar_chart(filtered_data)
+st.bar_chart(mbti_counts)
