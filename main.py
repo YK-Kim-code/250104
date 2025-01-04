@@ -1,3 +1,11 @@
 import streamlit as st
-import transformers
-print(transformers.__version__)
+import numpy 
+import pandas
+import requests
+import plotly.express as px
+import plotly.graph_objects as go
+
+type_info = pandas.read_csv('/kaggle/input/mbtitypes-full/types.csv', index_col='Type')
+df = pandas.read_csv('/kaggle/input/mbtitypes-full/countries.csv', index_col='Country')
+pandas.options.display.max_columns = 32
+df.loc[[fav_country]] * 100
