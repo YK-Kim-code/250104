@@ -17,10 +17,5 @@ selected_country = st.selectbox("Choose a country:", available_countries)
 # 데이터 필터링
 filtered_data = df[df["Country"] == selected_country]
 
-# MBTI 분포 계산
-mbti_distribution = filtered_data["mbti"].value_counts().reset_index()
-mbti_distribution.columns = ["MBTI Type", "Count"]
-
-# 결과 표시
 st.subheader(f"MBTI Distribution in {selected_country}")
-st.table(mbti_distribution)
+st.table(filtered_data)
