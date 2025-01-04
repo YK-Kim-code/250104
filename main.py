@@ -1,12 +1,7 @@
 import streamlit as st
 import numpy 
-import pandas
-import requests
+import pandas as pd
 
-fav_country = 'India'
-
-
-type_info = pandas.read_csv('countriesMBTI.csv', index_col='Type')
-df = pandas.read_csv('countriesMBTI.csv', index_col='Country')
-pandas.options.display.max_columns = 32
-df.loc[[fav_country]] * 100
+data_path = "countriesMBTI.csv"
+df = pd.read_csv(data_path)
+print(df.head())
