@@ -20,3 +20,4 @@ filtered_data = df[df["Country"] == selected_country]
 
 st.subheader(f"MBTI Distribution in {selected_country}")
 st.table(filtered_data)
+st.bar_chart(filtered_data)
