@@ -19,3 +19,12 @@ filtered_data = df[df["Country"] == selected_country]
 
 st.subheader(f"MBTI Distribution in {selected_country}")
 st.table(filtered_data)
+
+# 막대그래프 시각화
+st.subheader(f"MBTI Distribution Chart in {selected_country}")
+fig, ax = plt.subplots(figsize=(8, 5))
+mbti_counts.plot(kind="bar", ax=ax, color="skyblue")
+ax.set_title(f"MBTI Distribution in {selected_country}")
+ax.set_xlabel("MBTI Type")
+ax.set_ylabel("Count")
+st.pyplot(fig)
